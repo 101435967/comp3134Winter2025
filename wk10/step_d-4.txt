@@ -1,0 +1,2 @@
+From what it looks like they were able to see whats in this directory and the directory its in,
+and also the directory before it, which is not good.

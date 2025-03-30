@@ -1,0 +1,2 @@
+The sensitive infrormation we can what is being activated is the directories within the server.
+If an attacker understands the structure of your site it can lead to many unforseen issues to the website.

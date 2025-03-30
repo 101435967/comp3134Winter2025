@@ -1,0 +1,31 @@
+Was only able to figure out how to do the path traversal:
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+$allowed_directory = 'html';
+$path = isset($_GET['q']) ? $_GET['q'] : '.';
+$absolute_path = realpath($path);
+
+$basename = basename($absolute_path);
+
+if ($basename === $allowed_directory || strpos($absolute_path, $allowed_directory . DIRECTORY_SEPARATOR) === 0) {
+    if (!file_exists($absolute_path)) {
+        echo "Invalid directory or file.";
+        exit;
+    }
+
+    print "<pre>";
+    print_r(scandir($absolute_path));
+    print "</pre>";
+} else {
+    echo "Not valid entry";
+}
+?>
+
+Had to check if the current directory is within the allowed directry which is html and below and not any of the directories before it.
+by using the basename() I was able to check if the directory is valid from the absolute path and that anything
+below the allowed directory would not be able to be accecssed. 
+
+Was not able to figure out how to get it to not look at folders that do not exists.
