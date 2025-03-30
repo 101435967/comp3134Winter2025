@@ -1,0 +1,46 @@
+root@comp3134-lamponubuntu2204-s-2vcpu-4gb-tor1-01:~# nmap 172.217.12.110
+Starting Nmap 7.80 ( https://nmap.org ) at 2024-04-15 02:38 UTC
+Nmap scan report for sfo03s33-in-f14.1e100.net (172.217.12.110)
+Host is up (0.061s latency).
+Not shown: 998 filtered ports
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 5.79 seconds
+root@comp3134-lamponubuntu2204-s-2vcpu-4gb-tor1-01:~#
+--------------------------------------------------------------------------------
+root@comp3134-lamponubuntu2204-s-2vcpu-4gb-tor1-01:~# nmap -p 80 172.217.12.110
+Starting Nmap 7.80 ( https://nmap.org ) at 2024-04-15 02:39 UTC
+Nmap scan report for sfo03s33-in-f14.1e100.net (172.217.12.110)
+Host is up (0.061s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap done: 1 IP address (1 host up) scanned in 0.17 seconds
+root@comp3134-lamponubuntu2204-s-2vcpu-4gb-tor1-01:~#
+----------------------------------------------------------------------------------
+root@comp3134-lamponubuntu2204-s-2vcpu-4gb-tor1-01:~# nmap -p 0-1023 172.217.12.110
+Starting Nmap 7.80 ( https://nmap.org ) at 2024-04-15 02:41 UTC
+Nmap scan report for atl26s14-in-f14.1e100.net (172.217.12.110)
+Host is up (0.061s latency).
+Not shown: 1022 filtered ports
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 5.85 seconds
+root@comp3134-lamponubuntu2204-s-2vcpu-4gb-tor1-01:~#
+------------------------------------------------------------------------------------
+root@comp3134-lamponubuntu2204-s-2vcpu-4gb-tor1-01:~# nmap -F 172.217.12.110
+Starting Nmap 7.80 ( https://nmap.org ) at 2024-04-15 02:41 UTC
+Nmap scan report for atl26s14-in-f14.1e100.net (172.217.12.110)
+Host is up (0.062s latency).
+Not shown: 98 filtered ports
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 2.55 seconds
+root@comp3134-lamponubuntu2204-s-2vcpu-4gb-tor1-01:~#
