@@ -1,4 +1,0 @@
-root@comp3134-lamponubuntu2204-s-2vcpu-4gb-tor1-01:~# traceroute localhost
-traceroute to localhost (127.0.0.1), 30 hops max, 60 byte packets
- 1  localhost (127.0.0.1)  0.036 ms  0.010 ms  0.008 ms
-root@comp3134-lamponubuntu2204-s-2vcpu-4gb-tor1-01:~#
