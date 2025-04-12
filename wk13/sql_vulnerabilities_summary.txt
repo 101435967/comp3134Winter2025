@@ -1,0 +1,8 @@
+1) Input: Amit
+Observation: The query works as expected. It fetches all users named Amit with active = 1.
+
+2) Input: Amit’--
+Observation: The SQL query becomes malformed. The single quote breaks the query, and the rest is treated as a comment. This bypasses the `active = 1` check, which could return inactive or unauthorized results.
+
+3) Input: Amit’ or 1=1
+Observation: This creates a logical OR statement in SQL (`firstname = 'Amit' OR 1=1`), making the condition always true. It returns all rows where active = 1, exposing a serious SQL injection vulnerability.
