@@ -1,0 +1,14 @@
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users> ping -l 65500 134.122.46.80
+
+Pinging 134.122.46.80 with 65500 bytes of data:
+Reply from 134.122.46.80: bytes=65500 time=31ms TTL=52
+Reply from 134.122.46.80: bytes=65500 time=12ms TTL=52
+Reply from 134.122.46.80: bytes=65500 time=14ms TTL=52
+Reply from 134.122.46.80: bytes=65500 time=12ms TTL=52
+
+Ping statistics for 134.122.46.80:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 12ms, Maximum = 31ms, Average = 17ms
