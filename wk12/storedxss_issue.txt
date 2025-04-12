@@ -1,0 +1,17 @@
+Stored XSS Issue Explanation
+============================
+
+Stored Cross-Site Scripting (Stored XSS) occurs when malicious input provided by a user is saved by the server (in a file, database, etc.) and then later rendered to users without proper sanitization.
+
+In this lab scenario:
+- The input `<script>document.location.href="/directory_traversal_part1.php"</script>` was stored in a file (`storedxss.txt`).
+- The PHP file (`storexss.php`) reads the content of the file and outputs it directly to the browser without any encoding or sanitization.
+
+Issue:
+- Every time a user visits the page, the malicious script executes.
+- This affects all users, not just the attacker.
+- Victims can unknowingly be redirected to another page (like a malware site or a phishing page).
+- It puts the entire user base at risk and can be used to steal data, hijack sessions, or spread malware.
+
+Conclusion:
+This vulnerability is dangerous because the payload is persistent and affects every user who accesses the infected content. It must be mitigated by sanitizing/encoding output using functions like `htmlspecialchars()` in PHP.

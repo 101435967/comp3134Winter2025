@@ -1,0 +1,21 @@
+CSRF Test Observations
+=======================
+
+1. In the csfr.html:
+---------------------
+- The form does not include any CSRF token.
+- When the page is opened, it automatically sends a POST request using JavaScript with valid credentials.
+- The web server accepts the credentials without checking if the request is genuine.
+- This demonstrates a CSRF vulnerability, as anyone who visits the csfr.html could unknowingly trigger an unwanted login request.
+
+=> This method lacks any mechanism to verify if the submission is legitimate, making it insecure.
+
+2. In the csfr_form.php:
+--------------------------
+- The server generates a random token using PHP and stores it in the session.
+- The form includes a hidden field containing this CSRF token.
+- When the form is submitted, the token is included in the POST request.
+- On the server-side (csfr_action.php), the submitted token is compared with the session token.
+- If the tokens match, the request is processed; if not, it is rejected.
+
+=> This provides a much safer browsing experience because it ensures that the form was submitted intentionally by the legitimate user.
