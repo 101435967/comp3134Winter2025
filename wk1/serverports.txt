@@ -1,0 +1,5 @@
+Question: What is the definition of server port? 
+Answer: Server port generally refers to the port in TCP / IP protocol
+
+Question: How many bits does number above represent?
+Answer: 16-bit unsigned integer
